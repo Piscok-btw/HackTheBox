@@ -4,7 +4,7 @@ We're given an 64-bit ELF called Labyrinth.
 
 Firstly, i'll analyzed the program using `ida` to disassemble it. We can see a main function of this program.This program expects us to input `69` or `069` to get another user input.Otherwise, the profram will be exit.
 
-![decompile](/img/decompile.png)
+![decompile](img/decompile.png)
 
 #Find The Offset
 
@@ -12,7 +12,7 @@ Next, we'll check the buffer offset of this program.We can use `cyclic` in `pwng
 
 To overwrite the return address, we can fill the buffer with `56` byte followed by the destination address.We'll jump to `escape_plan` address cause it opens the flag.txt.
 
-![offset](/img/offset.png)
+![offset](img/offset.png)
 
 
 payload :
@@ -70,7 +70,10 @@ Dump of assembler code for function escape_plan:
 
 Now, it'work and we got the flag.
 
+![flag](img/flag.png)
+
 [solver](sv.py)
+
 
 
 
