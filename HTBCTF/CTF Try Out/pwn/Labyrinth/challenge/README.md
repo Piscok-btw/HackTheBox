@@ -4,7 +4,7 @@ We're given an 64-bit ELF called Labyrinth.
 
 Firstly, i'll analyzed the program using `ida` to disassemble it. We can see a main function of this program.This program expects us to input `69` or `069` to get another user input.Otherwise, the profram will be exit.
 
-![decompile](/img/decompile.png)
+![decompile](challenge/img/decompile.png)
 
 #Find The Offset
 
@@ -71,5 +71,6 @@ Dump of assembler code for function escape_plan:
 Now, it'work and we got the flag.
 
 [solver](sv.py)
+
 
 
