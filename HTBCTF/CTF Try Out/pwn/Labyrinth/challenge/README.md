@@ -6,7 +6,7 @@ Firstly, i analyzed the program using `ida` to disassemble it. We can see a main
 
 ![decompile](img/decompile.png)
 
-#Find The Offset
+##Find The Offset
 
 Next, we'll check the buffer offset of this program.We can use `cyclic` in `pwngdb` to find the offset.
 
@@ -56,7 +56,7 @@ pwndbg>
 ```
 ```
 
-#Stack  Alignment Fix
+##Stack  Alignment Fix
 
 In order to align our stack, we can add a `ret` address, or use the address after the push intruction of `escape_plan` function.
 
@@ -73,6 +73,7 @@ Now, it'work and we got the flag.
 ![flag](img/flag.png)
 
 [solver](sv.py)
+
 
 
 
