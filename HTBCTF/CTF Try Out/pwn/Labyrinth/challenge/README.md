@@ -2,7 +2,7 @@
 
 We're given an 64-bit ELF called Labyrinth.
 
-Firstly, i analyzed the program using `ida` to disassemble it. We can see a main function of this program.This program expects us to input `69` or `069` to get another user input.Otherwise, the profram will be exit.
+Firstly, i analyzed the program using `ida` to disassemble it. We can see a main function of this program.This program expects us to input `69` or `069` to get another user input.Otherwise, the program will be exit.
 
 ![decompile](img/decompile.png)
 
@@ -49,11 +49,9 @@ When i run the payload, the program crashses annd stop at `movaps` intrunction, 
 
 
 ```
-```
 pwndbg> x/i $rip
 => 0x70f22b677693:      movaps XMMWORD PTR [rsp+0x40],xmm0
 pwndbg>
-```
 ```
 
 ## Stack  Alignment Fix
@@ -73,6 +71,7 @@ Now, it'work and we got the flag.
 ![flag](img/flag.png)
 
 [solver](sv.py)
+
 
 
 
